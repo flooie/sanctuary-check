@@ -16,6 +16,9 @@
         $(".info").show();
         return open = !open;
       } else {
+                                 
+        window.location.href = 'page_one.html';
+                                 
         $(this).siblings().removeClass("full");
         $(this).removeClass("full");
         $(this).removeClass("side");
