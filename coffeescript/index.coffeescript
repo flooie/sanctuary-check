@@ -1,0 +1,23 @@
+$(".exit").hide()
+$(".info").hide()
+$ ->
+  open = true
+  
+  $(".info-card").click ->
+    if open
+      $(@).siblings().removeClass("full")
+      $(@).addClass("full")
+      $(@).removeClass("side")
+      $(@).siblings().addClass("side")
+      $(@).find(".exit").css("display", "inline")
+      $(".info").show()
+      open = !open
+    else
+      $(@).siblings().removeClass("full")
+      $(@).removeClass("full")
+      $(@).removeClass("side")
+      $(@).siblings().removeClass("side")
+      $(@).find(".exit").css("display", "none")
+      $(".info").hide()
+      open = !open
+

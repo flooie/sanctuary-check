@@ -1,0 +1,99 @@
+@import bourbon
+@import neat
+
+$black: black
+$white: white
+$gray: #9b9b9b
+
+html, body
+  font-family: Montserrat
+  width: 100%
+  margin: 0
+  padding: 0
+
+.box
+  width: 100%
+  height: 8em
+  background: steelblue
+  
+  h1
+    margin: 0
+    text-align: center
+    font-size: 4em
+    padding-top: 0.5em
+    color: white
+
+.info-cards
+  +outer-container(90%)
+  
+  .info-card
+    +animation(pulse 0.5s)
+    height: 20em
+    margin-top: 3em
+    background: teal
+    border-radius: 10px
+    box-shadow: 3px 4px 3px shade(teal, 30%)
+    cursor: pointer
+    @media(min-width: 1000px)
+      +span-columns(4)
+      +omega(3n)
+    @media(max-width: 1000px) and (min-width: 650px)
+      +span-columns(6)
+      +omega(2n)
+    @media(max-width: 650px)
+      +span-columns(12)
+      +omega(n)
+    &.full
+      +span-columns(12)
+      +omega(n)
+      +transition(0.3s)
+      height: 100vh
+      box-shadow: 0px 0px 0px white
+    &.side
+      display: none
+    &:nth-child(2)
+      background: #468966
+      box-shadow: 3px 4px 3px shade(#468966, 30%)
+    &:nth-child(3)
+      background: #FFF0A5
+      box-shadow: 3px 4px 3px shade(#FFF0A5, 30%)
+    &:nth-child(4)
+      background: #FFB03B
+      box-shadow: 3px 4px 3px shade(#FFB03B, 30%)
+    &:nth-child(5)
+      background: #B64926
+      box-shadow: 3px 4px 3px shade(#B64926, 30%)
+    &:nth-child(6)
+      background: #8E2800
+      box-shadow: 3px 4px 3px shade(#8E2800, 30%)
+    i
+      position: relative
+      top: 50%
+      left: 50%
+      +transform(translateX(-50%) translateY(-50%))
+      font-size: 4em
+      color: white
+    span
+      color: white
+      position: relative
+      left: 90%
+      font-size: 3em
+      display: none
+    .info
+      position: absolute
+      left: 50%
+      +transform(translateX(-50%))
+      +animation(fadeIn 1s)
+      display: none
+      h1
+        color: white
+        margin-left: 0.7em
+        font-size: 5em
+        
+        
+        
+    
+
+  
+      
+
